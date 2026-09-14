@@ -1,0 +1,18 @@
+{
+  // clone したディレクトリ名をそのまま環境名にする
+  "name": "${localWorkspaceFolderBasename}",
+  // ホスト側で、コンテナのビルド前に devcontainer-env-core の取得と .env の生成を行う
+  "initializeCommand": "bash .devcontainer/initialize.sh",
+  "dockerComposeFile": "devcontainer-env-core/compose.yml",
+  "service": "user",
+  "runServices": ["user", "ai"],
+  "workspaceFolder": "/home/dev/work",
+  "remoteUser": "dev",
+  "features": {
+    // 共通設定と拡張機能の許可リスト（他の vscode-* Feature を使う場合も必須）
+    "ghcr.io/diiva-szk/devcontainer-env-core/vscode-common:1": {}
+    // 必要に応じて追加
+    // "ghcr.io/diiva-szk/devcontainer-env-core/vscode-python:1": {},
+    // "ghcr.io/diiva-szk/devcontainer-env-core/vscode-terraform:1": {}
+  }
+}

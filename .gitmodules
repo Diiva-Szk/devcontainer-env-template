@@ -1,0 +1,3 @@
+[submodule ".devcontainer/devcontainer-env-core"]
+	path = .devcontainer/devcontainer-env-core
+	url = https://github.com/Diiva-Szk/devcontainer-env-core.git
