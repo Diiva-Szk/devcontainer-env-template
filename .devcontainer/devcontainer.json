@@ -3,7 +3,8 @@
   "name": "${localWorkspaceFolderBasename}",
   // ホスト側で、コンテナのビルド前に devcontainer-env-core の取得と .env の生成を行う
   "initializeCommand": "bash .devcontainer/initialize.sh",
-  "dockerComposeFile": "devcontainer-env-core/compose.yml",
+  // core の compose.yml を include したファイル（直接指さない理由は compose.yml を参照）
+  "dockerComposeFile": "compose.yml",
   "service": "user",
   "runServices": ["user", "ai"],
   "workspaceFolder": "/home/dev/work",
