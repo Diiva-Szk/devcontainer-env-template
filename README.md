@@ -39,6 +39,7 @@ VS Code で clone したディレクトリを開き、コマンドパレット�
 my-project/
 ├── .devcontainer/
 │   ├── devcontainer.json
+│   ├── compose.yml              # core の compose.yml を include する
 │   ├── initialize.sh            # 起動時にホスト側で実行
 │   └── devcontainer-env-core/   # submodule
 │       ├── compose.yml

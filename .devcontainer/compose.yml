@@ -1,0 +1,8 @@
+# devcontainer-env-core の compose.yml を読み込む。
+#   devcontainer.json から core の compose.yml を直接指すと、Dev Containers が compose ファイルの
+#   ディレクトリ名からプロジェクト名を決めるため、どのプロジェクトでも "devcontainer-env-core" になり、
+#   複数のプロジェクトを開いたときにコンテナが衝突する。
+#   このファイルを .devcontainer 直下に置くことで、プロジェクト名が "<プロジェクト名>_devcontainer" になる。
+#   include した compose.yml の相対パス（ビルドコンテキスト・マウント）と .env は、core のディレクトリを基準に解決される。
+include:
+  - devcontainer-env-core/compose.yml
